@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:outputStylesheet library="css" name="style_index.css" />
+    <h:outputScript library="js" name="library.js" />
+    <h:head>
+        <title>#{msg.welcome_title}</title>
+    </h:head>
+    <h:body>
+        <noscript>
+            Включите JavaScript в вашем браузере
+            <style type="text/css">
+            .main{display: none}
+            </style>
+        </noscript>
+        <div class="main">
+      <div class="header">
+          <h:graphicImage library="images" name="online_library.png" style="width: 100px; height: 100px;"/>
+          <p>#{msg.index_title}</p>
+      </div>
+            <div class="login">
+                <p class="">#{msg.input_info}</p>
+                <h:form styleClass="login_form">
+                    #{msg.input_name} <h:inputText id="username" required="true" requiredMessage="#{msg.login_required}" value="#{user.username}">
+                        <f:validator validatorId="com.javaee.web.validators.LoginValidator"/>
+                        <f:ajax event="keyup" render="loginError"/>
+                    </h:inputText>
+                    <h:commandButton action="pages/books?faces-redirect=true" value="Войти"/>
+                    <p><h:message id="loginError" for="username" styleClass="error"/></p>
+                </h:form>
+            </div>
+            <div class="footer">
+                #{msg.author_info}
+            </div>
+   </div>
+    </h:body>
+</html>
+

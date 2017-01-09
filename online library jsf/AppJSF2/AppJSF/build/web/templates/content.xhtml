@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:outputStylesheet library="css" name="style_books.css"/>
+    <h:outputScript library="js" name="library.js" />
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        <ui:composition>
+            <p>Найдено книг: #{searchController.totalBookCount}</p>
+            
+            <div class="page_by_page">
+                    <h:form rendered="#{searchController.totalBookCount>searchController.booksOnPage}">
+                        #{msg.book_counts}
+                        <ui:repeat value="#{searchController.pageList}" var="pageNumber" >
+                            <h:commandLink value="#{pageNumber}" action="#{searchController.selectPage()}" styleClass="#{pageNumber == searchController.selectedPageNumber ? 'selected_page':''}">
+                                <f:param name="page_number" value="#{pageNumber}" />
+                            </h:commandLink>
+                        </ui:repeat>
+                    </h:form>
+                </div>  
+            
+            <h:dataTable value="#{searchController.currentBookList}" var="b">
+                <h:column>
+                    <h:graphicImage value="/ShowImage?id=#{b.id}" width="190" height="250"/>
+                </h:column>
+                
+                <h:column>
+                    <p>#{msg.book_name} #{b.bookName}</p>
+                    <p>#{msg.author_name} #{b.author}</p>
+                    <p>#{msg.book_isbn} #{b.isbn}</p>
+                    <p>#{msg.book_publishing} #{b.publisher}</p>
+                    <p><h:outputLink styleClass="content_link" value="#{request.contextPath}/ShowPDF?id=#{b.id}">READ</h:outputLink></p>
+                </h:column>
+            </h:dataTable>
+            
+            
+                <!--Постраничность-->
+                <div class="page_by_page">
+                    <h:form rendered="#{searchController.totalBookCount>searchController.booksOnPage}">
+                        #{msg.book_counts}
+                        <ui:repeat value="#{searchController.pageList}" var="pageNumber" >
+                            <h:commandLink value="#{pageNumber}" action="#{searchController.selectPage()}" styleClass="#{pageNumber == searchController.selectedPageNumber ? 'selected_page':''}">
+                                <f:param name="page_number" value="#{pageNumber}" />
+                            </h:commandLink>
+                        </ui:repeat>
+                    </h:form>
+                </div>  
+
+            
+        </ui:composition>
+    </h:body>
+</html>
+

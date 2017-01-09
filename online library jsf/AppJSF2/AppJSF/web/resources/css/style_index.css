@@ -1,0 +1,41 @@
+@charset "utf-8";
+body {
+    background-color: gainsboro;
+}
+.main {
+	
+	text-align:center;
+	width: 1024px;
+        height: 512px;
+	background-color: #ffffff;
+	margin:auto;
+	margin-top:10%;
+	border:1px solid #000000;
+}
+
+.header {
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-size:20px;
+	padding-top: 100px;
+}
+
+.content {
+	text-align:left;
+	font-size:16px;
+	padding-left: 10px;
+}
+
+.footer {
+	font-family:serif;
+	font-size:14px;
+	color:#D8D8D8;
+        padding-top: 100px;
+}
+.login {
+        padding-top: 50px;
+}
+.error {
+    color: red;
+    font-style: italic;
+    font-size: 12px;
+}

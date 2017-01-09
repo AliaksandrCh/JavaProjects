@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+body {
+    background-color:#D8D8D8;
+}
+
+.main {
+    background-color: #ffffff;
+    width: 1024px;
+    height: auto;
+    margin:auto;
+}
+
+.logo_welcom {
+    
+}
+
+.logo{
+    float:left;
+}
+
+.welcome {
+    text-align: right;
+}
+
+.header {
+    margin-bottom: 5px;
+}
+
+.search {
+    display:table;
+    height: 45px;
+    width: 1024px;
+    vertical-align:middle;
+    clear: left;
+    background-color: antiquewhite;
+
+}
+
+.search_string {
+    width: 800px;
+}
+
+.content {
+    text-align:left;
+    font-size:16px;
+    height: 600px;
+}
+
+.left_panel {
+    width:150px;
+    float: left;
+
+}
+
+
+.right_panel_books {
+    float: left;
+}
+
+.footer {
+    font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size:14px;
+    color:darkcyan;
+    text-align: center;
+}
+
+
+
+.select_option {
+    float: left;
+}
+
+.search_img {
+    float:left;
+    margin-right:5px;
+    margin-top:8px;
+    height:30px;
+    width:30px;
+
+}
+
+.search_form {
+    float:left;
+    margin-right: 10px;
+}
+
+.search_btn {
+    background: #3bb1ff;
+    background-image: -webkit-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: -moz-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: -ms-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: -o-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: linear-gradient(to bottom, #3bb1ff, #2980b9);
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    text-shadow: 1px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.search_btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+li {
+    list-style-type: none; /* Убираем маркер списка */
+}
+
+ul {
+    margin-left: 0; /* Убираем отступ списка в браузере IE и Opera */
+    padding-left: 0; /* Убираем отступ списка в браузере Firefox, Safari, Chrome */
+}
+
+.book {
+    width: 200px;
+    height: 400px;
+    float: left;
+    padding: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+
+}
+
+.search_string {
+    size: 100px;
+}
+
+.genres a:hover, a:active, a:focus{
+    background-color: #ffffff;
+    color: #3cb0fd;
+}
+
+.genres a, a:visited { 
+    padding: 3px 3px 3px 15px;
+    display: block; 
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.letter {
+    
+}
+
+.page_by_page{
+    text-align: center;
+}
+
+.page_by_page .selected_page{
+    color: red;
+}
