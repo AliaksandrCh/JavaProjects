@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+body {
+    background-color:#D8D8D8;
+}
+
+.main {
+    width: 1024px;
+    height: auto;
+    margin:auto;
+}
+
+.header {
+    margin-bottom: 5px;
+}
+
+.search {
+    display:table;
+    height: 45px;
+    vertical-align:middle;
+
+}
+
+.content {
+    text-align:left;
+    font-size:16px;
+    height:500px;
+
+}
+
+.left_panel_list {
+    width:150px;
+    height: 100%;
+    float: left;
+
+}
+
+
+.right_panel_books {
+    float: left;
+}
+
+.footer {
+    font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size:14px;
+    color:#5C50FB;
+}
+
+
+
+.select_option {
+    float: left;
+}
+
+.search_img {
+    float:left;
+    margin-right:5px;
+    margin-top:8px;
+    height:30px;
+    width:30px;
+
+}
+
+.search_form {
+    float: left;
+    margin-right: 10px;
+}
+
+.search_btn {
+    background: #3bb1ff;
+    background-image: -webkit-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: -moz-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: -ms-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: -o-linear-gradient(top, #3bb1ff, #2980b9);
+    background-image: linear-gradient(to bottom, #3bb1ff, #2980b9);
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    text-shadow: 1px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.search_btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+li {
+    color: #ffe;
+    list-style-type: none; /* Убираем маркер списка */
+}
+
+ul {
+    margin-left: 0; /* Убираем отступ списка в браузере IE и Opera */
+    padding-left: 0; /* Убираем отступ списка в браузере Firefox, Safari, Chrome */
+}
+
+.book {
+    width: 200px;
+    height: 400px;
+    float: left;
+    padding: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+
+}
+.footer2 {
+    width: 1024px;
+    height: 20px;
+}
