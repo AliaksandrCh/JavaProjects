@@ -1,0 +1,32 @@
+
+<%@ page import="com.javaee.web.beans.Genre" %>
+<%@ page pageEncoding="UTF-8" %>
+<%request.setCharacterEncoding("UTF-8");%>
+<link href="../css/library.css" rel="stylesheet" type="text/css">
+
+<div class="left_panel_list">
+    <h4>Жанры:</h4>
+    <ul>
+
+        <jsp:useBean id="genreList" class="com.javaee.web.beans.GenreList" scope="application"/>
+
+            <% Integer selectGenreId = 0;
+                if (request.getParameter("genre_id") != null)
+                selectGenreId = Integer.valueOf(request.getParameter("genre_id"));
+
+                for(Genre genre: genreList.getGenreList()){
+                    if(selectGenreId == genre.getId()) {
+            %>
+            <li><a style="color: red" href="books.jsp?genre_id=<%= genre.getId() %>&name=<%= genre.getGenre()%>"><%= genre.getGenre()%></a></li>
+
+            <%
+                } else {
+            %>
+           <li><a href="books.jsp?genre_id=<%= genre.getId() %>&name=<%= genre.getGenre()%>"><%= genre.getGenre()%></a></li>
+        <%
+            }}
+        %>
+    </ul>
+</div>
+
+
